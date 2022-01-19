@@ -1,0 +1,73 @@
+/*Structure de base*/
+html, body {
+	min-height: 100vh;
+	max-height: 100vh;
+}
+
+html {
+	font-family: 'Press Start 2P', sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+
+	margin: auto;
+	max-width: 900px;
+}
+
+header {
+	text-align: center;
+}
+
+main {
+	display: flex;
+	flex: 1;
+}
+
+main nav {
+	width: 22.5%;
+	/*background-color: purple;*/
+}
+main nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+main nav li {
+	margin-bottom: 0.5rem;
+	font-size: 0.9rem;
+}
+main nav li:hover {
+	cursor: pointer;
+	border-color: white;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.808);
+	transition: 0.5s ease;
+}
+
+main section {
+	flex: 1;
+	margin-left: 0.5rem;
+	/*background-color: lightgreen;*/
+}
+
+footer {
+	margin: 0.5rem 0;
+}
+footer.encadrePokemon {
+	padding: 1rem;
+}
+
+/*Sélection catégorie*/
+.sectionPage {
+	position: relative;
+}
+
+.pSelectionCategorie {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* Afin de centrer l'élément (en le déplaçant de 50% de sa taille */
+	white-space: nowrap;
+}

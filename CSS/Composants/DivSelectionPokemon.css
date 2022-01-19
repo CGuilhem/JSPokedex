@@ -1,0 +1,26 @@
+/*DIV SELECTION POKEMON*/
+.divSelectionPokemon {
+	text-align: center;
+	border-radius: 0.3rem;
+	padding: 0.3rem;
+}
+.divSelectionPokemon img {
+	width: 5rem;
+	background-color: white;
+	border-radius: 0.3rem;
+}
+.divSelectionPokemon .numeroPokemon {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	font-size: 0.9rem;
+}
+.divSelectionPokemon .especePokemon {
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+}
+.divSelectionPokemon:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.808);
+	color: white;
+	transition: 0.5s ease;
+}

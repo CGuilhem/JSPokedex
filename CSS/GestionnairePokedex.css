@@ -1,0 +1,214 @@
+/*DIV POKEDEX*/
+.divPokedex {
+	max-height: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.divPokedex .divSelectionPokemon {
+	width: 30%;
+}
+.divPokedex .divSelectionPokemon:nth-child(odd):last-child {
+	margin-right: auto;
+	margin-left: 3%;
+}
+
+/*FICHE POKEDEX*/
+.divFichePokedex {
+	--largeurFichePokedex: 18rem;
+	display: flex;
+	justify-content: space-around;
+}
+
+/*FICHE STATS POKEDEX*/
+.divFicheStats {
+	width: var(--largeurFichePokedex);
+}
+.divFicheStats .ligne1 {
+	display: flex;
+}
+.divFicheStats .blockImage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 40%;
+}
+.divFicheStats .blockImage img {
+	width: 7rem;
+	padding: 10px 0;
+}
+.divFicheStats .blockImage span {
+	align-self: flex-start;
+	margin-left: 5%;
+}
+.divFicheStats .blockEspece {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 60%;
+	padding-left: 0.5rem;
+}
+.divFicheStats .blockEspece::before {
+
+}
+.divFicheStats .blockEspece::after {
+
+}
+.divFicheStats .especePokemon {
+
+}
+.divFicheStats .blockHP {
+	width: 75%;
+	margin-left: auto;
+}
+.divFicheStats .blockHP .ligne1HP {
+	display: flex;
+	align-items: center;
+}
+.divFicheStats .blockHP .ligne1HP span {
+	font-weight: bold;
+	font-size: 0.7rem;
+	line-height: 0.7rem;
+}
+.divFicheStats .blockHP .ligne1HP .barreHP {
+	height: 5px;
+	width: 65%;
+	border: 2px solid black;
+	background-color: darkslategrey;
+	border-radius: 1000px;
+}
+.divFicheStats .blockHP .ligne2HP {
+	text-align: right;
+	padding-top: 5%;
+	padding-right: 13%;
+}
+.divFicheStats .statusPokemon {
+	margin-bottom: 0.3rem;
+}
+
+.divFicheStats .ligne2 {
+	display: flex;
+	margin-top: 0.5rem;
+}
+.divFicheStats .ligne2 .blockTypes {
+	width: 55%;
+	padding: calc(var(--largeurBordureEncadrePokemon) + var(--paddingEncadrePokemon));
+	padding-left: 0;
+	margin-left: calc(var(--largeurBordureEncadrePokemon) + var(--paddingEncadrePokemon));
+}
+.divFicheStats .ligneStat {
+	display: flex;
+	flex-direction: column;
+}
+.divFicheStats .ligneStat .nomLigneStat {
+	padding: 5px 0;
+}
+.divFicheStats .ligneStat .valeurLigneStat {
+	font-weight: bold;
+	margin-left: auto;
+}
+
+.divFicheStats .ligneType {
+	display: flex;
+	flex-direction: column;
+}
+.divFicheStats .ligneType .nomLigneType {
+	padding: 5px 0;
+}
+.divFicheStats .ligneType .nomLigneType span {
+	font-weight: bold;
+}
+.divFicheStats .ligneType .valeurLigneType {
+	padding-left: 10%;
+}
+.divFicheStats .ligneType .valeurLigneType .ecartSupplementaire {
+	padding-left: 20%;
+}
+
+/* divFicheDesc */
+.divFicheDesc {
+	box-sizing: border-box;
+	width: calc(var(--largeurFichePokedex) - 8px);
+	border: 2px solid black;
+	outline: 4px solid grey;
+	padding: 0.5rem;
+	margin: 4px;
+}
+.divFicheDesc .ligne1 {
+	display: flex;
+}
+.divFicheDesc .blockImage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width: 40%;
+}
+.divFicheDesc .blockImage img {
+	width: 4rem;
+}
+.divFicheDesc .blockImage span {
+	font-size: 0.9rem;
+}
+
+.divFicheDesc .separateur {
+	position: relative;
+	width: calc(100% + 1rem);
+	margin: 0.3rem 0;
+	margin-left: -0.5rem;
+	height: 4px;
+	background-color: black;
+}
+.divFicheDesc .separateur .carre {
+	position: absolute;
+	top: 50%;      /* positionne à 50% du haut de la hauteur du parent */
+	height: 6px;
+	width: 6px;
+	background-color: white;
+	border: 2px solid black;
+	--transformX: 0%;
+	transform: translate(var(--transformX), -50%); /* Recentrer sur la ligne */
+}
+.divFicheDesc .separateur .carreGauche {
+	left: 4%;  /* Positionner le point de départ des 4 de gauche */
+}
+.divFicheDesc .separateur .carreDroite {
+	left: 58.5%;  /* Positionner le point de départ des 4 de droite */
+}
+.divFicheDesc .separateur .carre2 {
+	--transformX: 300%;	/* Décaler par rapport au premier carré des 4 en redéfinissant la variable pour le calcul de translate() dans.carre */
+}
+.divFicheDesc .separateur .carre3 {
+	--transformX: 600%;
+}
+.divFicheDesc .separateur .carre4 {
+	--transformX: 900%;
+}
+
+.divFicheDesc .blockEspece {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+}
+
+.divFicheDesc .blockEspece > * { /*Tous les enfants directs de .blockEspece*/
+	margin-top: 0.5rem;
+}
+
+.divFicheDesc .ligne2 {
+	padding: 0.5rem 0;
+	font-size: 0.95rem;
+}
+
+.divFicheDesc .blockEspece .divTaille, .divFicheDesc .blockEspece .divPoids  {
+	display: flex; /* ne sert qu'à rendre le margin-left: auto des spans en-dessous */
+}
+.divFicheDesc .blockEspece .divTaille span, .divFicheDesc .blockEspece .divPoids span {
+	margin-left: auto;
+	font-weight: bold;
+}
+
+.divFicheDesc .ligne2 {
+	line-height: 1.3rem;
+}

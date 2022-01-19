@@ -1,0 +1,5 @@
+@import 'designSystem.css';
+@import 'App.css';
+@import 'GestionnairePokedex.css';
+@import 'GestionnaireMesPokemons.css';
+@import './Composants/DivSelectionPokemon.css'
