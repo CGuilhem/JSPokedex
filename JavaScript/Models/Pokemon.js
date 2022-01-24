@@ -1,3 +1,5 @@
+import DAO from "./../DAO"
+
 export default class Pokemon {
     numero = -1;
     espece = "";
@@ -14,7 +16,13 @@ export default class Pokemon {
     taille = -1;
     poids = -1;
 
+    jsonPokemon;
+    jsonEspece;
+
     constructor(jsonPokemon, jsonEspece) {
+        this.jsonPokemon = jsonPokemon;
+        this.jsonEspece = jsonEspece;
+
         this.numero = jsonPokemon.id;
         this.espece = jsonPokemon.name;
 
@@ -35,5 +43,29 @@ export default class Pokemon {
 
         this.genre = jsonEspece.genera[7].genus.slice(0, -8);
         this.description = jsonEspece.flavor_text_entries[7].flavor_text;		
+    }
+
+    static obtenirNomPokemon() {
+
+        const nom = prompt("Nommer le pokémon :");
+        if (!nom || nom.length === 0) {
+            alert("Nom Invalide");
+            return null;
+        }
+
+        const caracteresInvalides = nom.match(/[^a-zA-Z0-9éèàîâçêô]/); // Écrire entre slashs permet d'écrire une regex. Ici, on récupère tout ce qui n'est pas, grâce au ^, tous les caractères qui ne le suivent pas
+        if (caracteresInvalides) {
+            alert("Caractères invalides présents");
+            return null;
+        }
+
+        const nomDispo = DAO.verifierSiNomPokemonDisponible(nom);
+
+        if (!nomDispo) {
+            alert("Le nom n'est pas disponible");
+            return null;
+        }  
+
+        return nom;
     }
 }

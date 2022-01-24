@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.divMesPokemons {
+    max-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.divMesPokemons .divSelectionPokemon {
+    width: 30%;
+}
+.divMesPokemons .divSelectionPokemon p {
+    margin: 10px 0;
+}
+
+.divFicheMesPokemons {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.divFicheMesPokemons .blockImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.divFicheMesPokemons .blockImage p {
+    margin: 5px 0;
+}
+.divFicheMesPokemons .blockImage img{
+    width: 7rem;
+    padding: 10px 0;
+}
+.divFicheMesPokemons .blockImage span {
+    padding: 5px 0;
+}
+.divFicheMesPokemons .boutonFicheMonPokemon {
+    width: 100%;
+    text-align: center;
+
+    margin-top: 1rem;
+}
+.divFicheMesPokemons .boutonFicheMonPokemon:hover {
+    cursor: pointer;
+	border-color: white;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.808);
+	transition: 0.5s ease;
+}

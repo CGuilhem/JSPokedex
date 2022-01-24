@@ -1,5 +1,6 @@
 import App from "./App";
 import DAO from "./DAO";
+import Pokemon from "./Models/Pokemon"
 import DivSelectionPokemon from "./Composants/DivSelectionPokemon"
 
 export default class GestionnairePokedex {
@@ -121,5 +122,18 @@ export default class GestionnairePokedex {
             </div>
         `;
         divFichePokedex.append(divFicheDesc);
+
+        const boutonAjouterPokemon = document.createElement("div");
+        boutonAjouterPokemon.classList.add("encadrePokemon", "boutonAjouterPokemon");
+        boutonAjouterPokemon.innerText = "Ajouter à mes Pokémons";
+        boutonAjouterPokemon.onclick = () => {
+            const nom = Pokemon.obtenirNomPokemon();
+            if (!nom) {
+                return;
+            }
+            DAO.ajouterAMesPokemons(pokemon, nom);
+        };
+
+        divFichePokedex.append(boutonAjouterPokemon);
     }
 }

@@ -17,6 +17,7 @@
 .divFichePokedex {
 	--largeurFichePokedex: 18rem;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 }
 
@@ -211,4 +212,18 @@
 
 .divFicheDesc .ligne2 {
 	line-height: 1.3rem;
+}
+
+.boutonAjouterPokemon {
+	width: 100%;
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.boutonAjouterPokemon:hover {
+	cursor: pointer;
+	border-color: white;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.808);
+	transition: 0.5s ease;
 }

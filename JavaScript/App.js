@@ -1,3 +1,4 @@
+import DAO from "./DAO";
 import GestionnaireMesPokemons from "./GestionnaireMesPokemons";
 import GestionnairePokedex from "./GestionnairePokedex";
 
@@ -5,6 +6,7 @@ export default class App {
     static sectionPage;
 
     static init() {
+        DAO.chargerMesPokemons();
         this.sectionPage = document.querySelector(".sectionPage");
         if (!this.sectionPage) {
             throw new Error("sectionPage introuvable");
